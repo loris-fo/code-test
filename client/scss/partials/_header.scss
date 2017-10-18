@@ -1,22 +1,89 @@
-header {
-  padding: 15px;
+.navigation {
+    list-style: none;
+    background: $primary;
+    color: $white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    li {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    a {
+      color: $white;
+      font-size: 18px;
+
+    }
+    .nav {
+      display: flex;
+      flex-direction: column;
+      width: 256px;
+      float: right;
+      padding: 30px;
+    }
+    button {
+      border-radius: 6px;
+    }
+}
+.site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: $white;
+    position: relative;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+}
+.nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
 }
 
 // Setup
 $menuwidth: 40px!default;
 $menuheight: 40px!default;
+label[for="nav-trigger"] {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+  	display: block;
+  	@include text-hide();
+  	background: url(/img/icon/solid/menu.png) no-repeat center center;
+  	background-size: $menuwidth $menuheight;
+  	width: $menuwidth;
+  	height: $menuheight;
+  	&.center {
+  		margin:0 auto;
+  	}
+    &:hover {
+      cursor: pointer;
+    }
+}
+.nav-trigger:checked + label {
+    right: 271px;
+}
 
-.mobile-menu {
-	display: block;
-	@include text-hide();
-	background: url(/img/icon/solid/menu.png) no-repeat center center;
-	background-size: $menuwidth $menuheight;
-	width: $menuwidth;
-	height: $menuheight;
-	&.center {
-		margin:0 auto;
-	}
-  &:hover {
-    cursor: pointer;
-  }
+.nav-trigger:checked ~ .site-wrap {
+    left: -256px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+.nav-trigger + label, .site-wrap {
+    transition: right 0.2s;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+
+.mobile-header {
+  padding: 15px;
 }
