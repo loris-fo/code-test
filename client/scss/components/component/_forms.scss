@@ -432,7 +432,7 @@ input[type='range'] {
 		border: $form-input-range-track-border-width solid $form-input-range-track-border-color;
 		border-radius: $form-input-range-track-radius;
 	}
-	
+
 	&::-webkit-slider-thumb {
 		@include thumb;
 		-webkit-appearance: none;

@@ -40,7 +40,7 @@ body {
 	font-stretch: normal;
 	// Defaults
 	font-size: 16px;
-    color: $bodycolor;
+    color: $darkgrey;
     font-family: $bfont;
 }
 
@@ -50,13 +50,13 @@ body {
 .heading {
 	font-family: $hfont;
 	font-weight: 300;
-	color: $headingcolor;
+	color: $primary;
 	strong {font-weight: 400;}
 }
 .body {
 	font-family: $bfont;
 	font-weight: 300;
-	color: $bodycolor;
+	color: $darkgrey;
 }
 //// Mobile
 h1, .fs-1 {

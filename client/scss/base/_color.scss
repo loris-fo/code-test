@@ -4,14 +4,17 @@
 
 // SETUP
 //// Base
-$primary: #4A90E2!default;
-$secondary: #0E1C2D!default;
+$primary: #0e3757!default;
+$secondary: #f56a75!default;
 $black: #000000!default;
 $darkgrey: #9B9B9B!default;
-$lightgrey: #EEEEEE!default;
+$midgrey: #8d9ca8!default;
+$lightgrey: #d8d8d8!default;
 $white: #FFFFFF!default;
+$blue: #4a90e2!default;
+$darkblue: #0e1c2d!default;
 //// States
-$error: #D0021B!default;
+$error: #d0021b!default;
 $warning: #F5A623!default;
 $success: #7ED321!default;
 $disabled: $lightgrey!default;
@@ -25,17 +28,20 @@ $slack: #E9A820!default;
 $youtube: #CD201F!default;
 $dribbble: #EA4C89!default;
 //// Defaults
-$bodycolor: $secondary!default;
-$headingcolor: $secondary!default;
-$line: #D8D8D8!default;
+$bodycolor: #f3f3f3!default;
+$headingcolor: bodycolor!default;
+$line: #EEEEEE!default;
 //// Into an array
 $colors: (
 	primary: $primary,
 	secondary: $secondary,
 	black: $black,
 	darkgrey: $darkgrey,
+	midgrey: $midgrey,
 	lightgrey: $lightgrey,
 	white: $white,
+	blue: $blue,
+	darkblue: $darkblue,
 	error: $error,
 	warning: $warning,
 	success: $success,
@@ -57,7 +63,7 @@ $colors: (
 //// Links
 a {
 	color: $primary;
-    text-decoration: none;    
+    text-decoration: none;
     &.link-secondary {color: $secondary;}
 	a:link a:visited {color: inherit;}
 }
@@ -78,7 +84,7 @@ a:not([href]):not([tabindex]) {
 @each $name, $color in $colors {
 	.fc-#{$name} {
 		color: #{$color}!important;
-	} 
+	}
 	.bg-#{$name} {
 		background-color: #{$color}!important;
 	}
@@ -93,7 +99,7 @@ a:not([href]):not([tabindex]) {
 	a {
 		-webkit-transition: all .2s ease;
 		-moz-transition: all .2s ease;
-		transition: all .2s ease;	
+		transition: all .2s ease;
 		&.link-secondary:hover {color: lighten($secondary, 15%);}
 	}
 }

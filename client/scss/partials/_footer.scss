@@ -1,0 +1,36 @@
+footer {
+  background-color: $primary;
+  padding: 40px 15px;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  a.logo {
+    width: 125px;
+    height: 55px;
+    &.secondary {
+      background-size: 125px 55px;
+    }
+  }
+  p {
+    color: $white;
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  a {
+    color: $secondary;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  footer > div {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 1120px;
+    margin: 0 auto;
+    p {
+      margin: 0;
+    }
+  }
+}

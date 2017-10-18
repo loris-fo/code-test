@@ -1,0 +1,22 @@
+header {
+  padding: 15px;
+}
+
+// Setup
+$menuwidth: 40px!default;
+$menuheight: 40px!default;
+
+.mobile-menu {
+	display: block;
+	@include text-hide();
+	background: url(/img/icon/solid/menu.png) no-repeat center center;
+	background-size: $menuwidth $menuheight;
+	width: $menuwidth;
+	height: $menuheight;
+	&.center {
+		margin:0 auto;
+	}
+  &:hover {
+    cursor: pointer;
+  }
+}
