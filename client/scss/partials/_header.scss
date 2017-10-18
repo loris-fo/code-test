@@ -54,7 +54,6 @@ label[for="nav-trigger"] {
     top: 15px;
     right: 15px;
     z-index: 2;
-  	display: block;
   	@include text-hide();
   	background: url(/img/icon/solid/menu.png) no-repeat center center;
   	background-size: $menuwidth $menuheight;
@@ -84,6 +83,31 @@ body {
 
 
 
-.mobile-header {
+.header-section {
   padding: 15px;
+  ul.nav-items {
+    display: none;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .nav-trigger, .nav-trigger + label {
+    display: none;
+  }
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1120px;
+    margin: 0 auto;
+    ul.nav-items {
+      display: flex;
+      align-items: center;
+    }
+    li {
+      margin-right: 30px;
+    }
+    button {
+      border-radius: 6px;
+    }
+  }
 }
