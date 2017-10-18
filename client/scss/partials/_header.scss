@@ -50,7 +50,7 @@
 $menuwidth: 40px!default;
 $menuheight: 40px!default;
 label[for="nav-trigger"] {
-    position: fixed;
+    position: absolute;
     top: 15px;
     right: 15px;
     z-index: 2;
@@ -68,6 +68,7 @@ label[for="nav-trigger"] {
 }
 .nav-trigger:checked + label {
     right: 271px;
+    background: url(/img/icon/solid/close.png) no-repeat center center;
 }
 
 .nav-trigger:checked ~ .site-wrap {
